@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class ShippingService {
     public static void ship(List<ShippingProduct> products) {
-        System.out.println("** Shipment notice **");
+        System.out.println("\n\n** Shipment notice **");
 
         Map<String,Integer> productCount = new HashMap<>();
         Map<String,Integer> productWeight = new HashMap<>();

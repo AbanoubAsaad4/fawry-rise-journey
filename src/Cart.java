@@ -22,11 +22,11 @@ public class Cart {
     public void add(Product product, int quantity) {
         String name = product.getName();
         if(!Market.isInMarket(name))
-            System.out.println("Can't Add it, Invalid product name");
+            System.out.printf("Can't Add %s, Invalid product name\n\n", name);
         else if(!Market.isInStock(name,quantity))
-            System.out.println("Can't Add it, CanNot enough stock of this product");
+            System.out.printf("Can't Add %s, There's no enough stock of this product\n\n", name);
         else if(Market.getProduct(name) instanceof Expirable && ((Expirable) Market.getProduct(name)).isExpired())
-            System.out.println("Can't Add it, Expired Product");
+            System.out.printf("Can't Add %s, Expired Product\n\n", name);
         else
         {
             if(products.containsKey(product)) {

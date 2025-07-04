@@ -16,7 +16,7 @@ public class Main {
 
         Cart cart = customer.getCart();
         cart.add(Cheese, 2);
-        cart.add(TV, 2);
+        cart.add(TV, 4);
         cart.add(ScratchCard, 1);
         Checkout.checkout(customer, cart);
     }
