@@ -13,16 +13,19 @@ public class ShippableProduct extends Product implements Shippable, ShippingProd
     }
 
     public void setWeight(int weight) {
+
         this.weight = weight;
     }
 
     @Override
     public double getShippingCost() {
+
         return shippingCost;
     }
 
     @Override
     public int getWeight() {
+
         return weight;
     }
 }

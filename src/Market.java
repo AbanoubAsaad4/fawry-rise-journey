@@ -2,7 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Market {
-    private static Map<String, Product> availableProducts = new HashMap<>();;
+    private static final Map<String, Product> availableProducts = new HashMap<>(); // Holds all products of the Market
+
 
     public static Map<String, Product> getAvailableProducts() {
         return availableProducts;
@@ -13,15 +14,11 @@ public class Market {
     }
 
     public static void addProduct(Product product) {
-        if (product.getName().isEmpty() || product.getQuantity() < 1)
-            System.out.println("Invalid Inputs!");
-        else
-        {
             String productName =  product.getName();
             availableProducts.put(productName, product);
-        }
     }
 
+    // Updates the available quantity of the specified product after a purchase
     public static void reduceProductQuantity(String name, int quantity) {
         Product product = availableProducts.get(name);
         int availableQuantity = getAvailableProducts().get(name).getQuantity();

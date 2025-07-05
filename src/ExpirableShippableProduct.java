@@ -17,36 +17,30 @@ public class ExpirableShippableProduct extends Product implements Expirable, Shi
     }
 
     public void setShippingCost(double shippingCost) {
-
         this.shippingCost = shippingCost;
     }
 
     public void setWeight(int weight) {
-
         this.weight = weight;
     }
 
     @Override
     public LocalDate getExpirationDate() {
-
         return expirationDate;
     }
 
     @Override
     public boolean isExpired() {
-
         return expirationDate.isBefore(LocalDate.now());
     }
 
     @Override
     public double getShippingCost() {
-
         return shippingCost;
     }
 
     @Override
     public int getWeight() {
-
         return weight;
     }
 }
